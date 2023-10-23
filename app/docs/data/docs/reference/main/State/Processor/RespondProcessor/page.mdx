@@ -1,0 +1,67 @@
+---
+type: Class
+---
+
+# [ApiPlatform\State\Processor\RespondProcessor](/docs/vmain/reference/State/Processor/RespondProcessor)
+
+Serializes data.
+
+
+```php
+class ApiPlatform\State\Processor\RespondProcessor implements `<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`
+{
+    public __construct(null|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>` $iriConverter, null|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, null|`<a href="/docs/vmain/reference/Metadata/Operation/Factory/OperationMetadataFactoryInterface">ApiPlatform\Metadata\Operation\Factory\OperationMetadataFactoryInterface</a>` $operationMetadataFactory)
+    public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context)
+    public clone($data)
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(null|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>` $iriConverter, null|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, null|`<a href="/docs/vmain/reference/Metadata/Operation/Factory/OperationMetadataFactoryInterface">ApiPlatform\Metadata\Operation\Factory\OperationMetadataFactoryInterface</a>` $operationMetadataFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>iriConverter</td><td>`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`</td><td></td></tr><tr><td>resourceClassResolver</td><td>`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>operationMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Operation/Factory/OperationMetadataFactoryInterface">ApiPlatform\Metadata\Operation\Factory\OperationMetadataFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### process
+
+
+
+```php
+public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+### clone
+
+
+
+```php
+public clone($data)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+

@@ -1,0 +1,65 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Doctrine\EventListener\PublishMercureUpdatesListener](/docs/vmain/reference/Doctrine/EventListener/PublishMercureUpdatesListener)
+
+Publishes resources updates to the Mercure hub.
+
+
+```php
+class ApiPlatform\Doctrine\EventListener\PublishMercureUpdatesListener
+{
+    public __construct(`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>` $iriConverter, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, Symfony\Component\Serializer\SerializerInterface $serializer, array<string, array<int, string>|string> $formats, null|Symfony\Component\Messenger\MessageBusInterface $messageBus, null|Symfony\Component\Mercure\HubRegistry $hubRegistry, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>` $graphQlSubscriptionManager, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>` $graphQlMercureSubscriptionIriGenerator, null|Symfony\Component\ExpressionLanguage\ExpressionLanguage $expressionLanguage, bool $includeType)
+    public onFlush(Doctrine\Common\EventArgs $eventArgs): null
+    public postFlush(): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>` $iriConverter, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, Symfony\Component\Serializer\SerializerInterface $serializer, array<string, array<int, string>|string> $formats, null|Symfony\Component\Messenger\MessageBusInterface $messageBus, null|Symfony\Component\Mercure\HubRegistry $hubRegistry, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>` $graphQlSubscriptionManager, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>` $graphQlMercureSubscriptionIriGenerator, null|Symfony\Component\ExpressionLanguage\ExpressionLanguage $expressionLanguage, bool $includeType)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>resourceClassResolver</td><td>`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>iriConverter</td><td>`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`</td><td></td></tr><tr><td>resourceMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>serializer</td><td>Symfony\Component\Serializer\SerializerInterface</td><td></td></tr><tr><td>formats</td><td>array&lt;string, array&lt;int, string&gt;
+string&gt;</td><td></td></tr><tr><td>messageBus</td><td>Symfony\Component\Messenger\MessageBusInterface</td><td></td></tr><tr><td>hubRegistry</td><td>Symfony\Component\Mercure\HubRegistry</td><td></td></tr><tr><td>graphQlSubscriptionManager</td><td>`<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>`</td><td></td></tr><tr><td>graphQlMercureSubscriptionIriGenerator</td><td>`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>`</td><td></td></tr><tr><td>expressionLanguage</td><td>Symfony\Component\ExpressionLanguage\ExpressionLanguage</td><td></td></tr><tr><td>includeType</td><td>bool</td><td></td></tr>
+</tbody>
+</table>
+
+### onFlush
+
+Collects created, updated and deleted objects.
+
+```php
+public onFlush(Doctrine\Common\EventArgs $eventArgs): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>eventArgs</td><td>Doctrine\Common\EventArgs</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### postFlush
+
+Publishes updates for changes collected on flush, and resets the store.
+
+```php
+public postFlush(): null
+```
+
+#### Returns
+
+null

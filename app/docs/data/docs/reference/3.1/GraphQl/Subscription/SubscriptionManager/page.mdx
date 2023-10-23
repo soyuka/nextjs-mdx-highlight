@@ -1,0 +1,72 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\Subscription\SubscriptionManager](/docs/v3.1/reference/GraphQl/Subscription/SubscriptionManager)
+
+Manages all the queried subscriptions by creating their ID
+and saving to a cache the information needed to publish updated data.
+
+
+```php
+class ApiPlatform\GraphQl\Subscription\SubscriptionManager implements `<a href="/docs/v3.1/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>`
+{
+    public __construct(Psr\Cache\CacheItemPoolInterface $subscriptionsCache, `<a href="/docs/v3.1/reference/GraphQl/Subscription/SubscriptionIdentifierGeneratorInterface">ApiPlatform\GraphQl\Subscription\SubscriptionIdentifierGeneratorInterface</a>` $subscriptionIdentifierGenerator, `<a href="/docs/v3.1/reference/GraphQl/Resolver/Stage/SerializeStageInterface">ApiPlatform\GraphQl\Resolver\Stage\SerializeStageInterface</a>` $serializeStage, `<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+    public retrieveSubscriptionId(array $context, null|array $result): string
+    public getPushPayloads(object $object): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Psr\Cache\CacheItemPoolInterface $subscriptionsCache, `<a href="/docs/v3.1/reference/GraphQl/Subscription/SubscriptionIdentifierGeneratorInterface">ApiPlatform\GraphQl\Subscription\SubscriptionIdentifierGeneratorInterface</a>` $subscriptionIdentifierGenerator, `<a href="/docs/v3.1/reference/GraphQl/Resolver/Stage/SerializeStageInterface">ApiPlatform\GraphQl\Resolver\Stage\SerializeStageInterface</a>` $serializeStage, `<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>subscriptionsCache</td><td>Psr\Cache\CacheItemPoolInterface</td><td></td></tr><tr><td>subscriptionIdentifierGenerator</td><td>`<a href="/docs/v3.1/reference/GraphQl/Subscription/SubscriptionIdentifierGeneratorInterface">ApiPlatform\GraphQl\Subscription\SubscriptionIdentifierGeneratorInterface</a>`</td><td></td></tr><tr><td>serializeStage</td><td>`<a href="/docs/v3.1/reference/GraphQl/Resolver/Stage/SerializeStageInterface">ApiPlatform\GraphQl\Resolver\Stage\SerializeStageInterface</a>`</td><td></td></tr><tr><td>iriConverter</td><td>`<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### retrieveSubscriptionId
+
+
+
+```php
+public retrieveSubscriptionId(array $context, null|array $result): string
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>context</td><td>array</td><td></td></tr><tr><td>result</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+string
+
+### getPushPayloads
+
+
+
+```php
+public getPushPayloads(object $object): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td>object</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

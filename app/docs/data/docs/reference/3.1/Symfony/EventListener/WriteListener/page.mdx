@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\WriteListener](/docs/v3.1/reference/Symfony/EventListener/WriteListener)
+
+Bridges persistence and the API system.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\WriteListener
+{
+    public __construct(`<a href="/docs/v3.1/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, `<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/v3.1/reference/Api/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, null|`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>` $uriVariablesConverter)
+    public onKernelView(Symfony\Component\HttpKernel\Event\ViewEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/v3.1/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, `<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/v3.1/reference/Api/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, null|`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>` $uriVariablesConverter)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>processor</td><td>`<a href="/docs/v3.1/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`</td><td></td></tr><tr><td>iriConverter</td><td>`<a href="/docs/v3.1/reference/Api/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`</td><td></td></tr><tr><td>resourceClassResolver</td><td>`<a href="/docs/v3.1/reference/Api/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>uriVariablesConverter</td><td>`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelView
+
+Persists, updates or delete data return by the controller if applicable.
+
+```php
+public onKernelView(Symfony\Component\HttpKernel\Event\ViewEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\ViewEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

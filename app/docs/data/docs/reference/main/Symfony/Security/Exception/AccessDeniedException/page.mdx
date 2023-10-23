@@ -1,0 +1,87 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\Security\Exception\AccessDeniedException](/docs/vmain/reference/Symfony/Security/Exception/AccessDeniedException)
+
+
+
+```php
+class ApiPlatform\Symfony\Security\Exception\AccessDeniedException extends Symfony\Component\Security\Core\Exception\AccessDeniedException implements Symfony\Component\Security\Core\Exception\ExceptionInterface, Stringable, Throwable, `<a href="/docs/vmain/reference/Metadata/Exception/HttpExceptionInterface">ApiPlatform\Metadata\Exception\HttpExceptionInterface</a>`
+{
+    public getStatusCode(): int
+    public getHeaders(): array
+    public __construct(string $message, null|Throwable $previous, int $code)
+    public getAttributes(): array
+    public setAttributes(array|string $attributes): null
+    public getSubject()
+    public setSubject($subject): null
+    public __wakeup()
+    public getMessage(): string
+    public getCode()
+    public getFile(): string
+    public getLine(): int
+    public getTrace(): array
+    public getPrevious(): Throwable
+    public getTraceAsString(): string
+    public __toString(): string
+}
+```
+## Properties
+### message
+
+```php
+$message
+```
+
+
+
+### code
+
+```php
+$code
+```
+
+
+
+### file
+
+```php
+string $file
+```
+
+
+
+### line
+
+```php
+int $line
+```
+
+
+
+## Methods
+
+### getStatusCode
+
+
+
+```php
+public getStatusCode(): int
+```
+
+#### Returns
+
+int
+
+### getHeaders
+
+
+
+```php
+public getHeaders(): array
+```
+
+#### Returns
+
+array

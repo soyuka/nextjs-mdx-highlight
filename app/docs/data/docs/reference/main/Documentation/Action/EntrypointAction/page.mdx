@@ -1,0 +1,60 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Documentation\Action\EntrypointAction](/docs/vmain/reference/Documentation/Action/EntrypointAction)
+
+Generates the API entrypoint.
+
+
+```php
+class ApiPlatform\Documentation\Action\EntrypointAction
+{
+    public __construct(`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, `<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, array $documentationFormats)
+    public __invoke(Symfony\Component\HttpFoundation\Request $request)
+    public provide(): `<a href="/docs/vmain/reference/Documentation/Entrypoint">ApiPlatform\Documentation\Entrypoint</a>`
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, `<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, array $documentationFormats)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>resourceNameCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>provider</td><td>`<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>`</td><td></td></tr><tr><td>processor</td><td>`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`</td><td></td></tr><tr><td>documentationFormats</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+### __invoke
+
+
+
+```php
+public __invoke(Symfony\Component\HttpFoundation\Request $request)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>request</td><td>Symfony\Component\HttpFoundation\Request</td><td></td></tr>
+</tbody>
+</table>
+
+### provide
+
+
+
+```php
+public provide(): `<a href="/docs/vmain/reference/Documentation/Entrypoint">ApiPlatform\Documentation\Entrypoint</a>`
+```
+
+#### Returns
+
+`<a href="/docs/vmain/reference/Documentation/Entrypoint">ApiPlatform\Documentation\Entrypoint</a>`

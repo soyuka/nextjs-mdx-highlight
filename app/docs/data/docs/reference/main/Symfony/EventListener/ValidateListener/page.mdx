@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\ValidateListener](/docs/vmain/reference/Symfony/EventListener/ValidateListener)
+
+Validates data.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\ValidateListener
+{
+    public __construct(`<a href="/docs/vmain/reference/Validator/ValidatorInterface">ApiPlatform\Validator\ValidatorInterface</a>` $validator, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+    public onKernelView(Symfony\Component\HttpKernel\Event\ViewEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Validator/ValidatorInterface">ApiPlatform\Validator\ValidatorInterface</a>` $validator, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>validator</td><td>`<a href="/docs/vmain/reference/Validator/ValidatorInterface">ApiPlatform\Validator\ValidatorInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelView
+
+Validates data returned by the controller if applicable.
+
+```php
+public onKernelView(Symfony\Component\HttpKernel\Event\ViewEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\ViewEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

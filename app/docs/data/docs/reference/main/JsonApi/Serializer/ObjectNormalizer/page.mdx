@@ -1,0 +1,104 @@
+---
+type: Class
+---
+
+# [ApiPlatform\JsonApi\Serializer\ObjectNormalizer](/docs/vmain/reference/JsonApi/Serializer/ObjectNormalizer)
+
+Decorates the output with JSON API metadata when appropriate, but otherwise
+just passes through to the decorated normalizer.
+
+```php
+class ApiPlatform\JsonApi\Serializer\ObjectNormalizer implements Symfony\Component\Serializer\Normalizer\NormalizerInterface, `<a href="/docs/vmain/reference/Serializer/CacheableSupportsMethodInterface">ApiPlatform\Serializer\CacheableSupportsMethodInterface</a>`
+{
+    public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $decorated, `<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory)
+    public supportsNormalization($data, null|string $format, array $context): bool
+    public getSupportedTypes($format): array
+    public hasCacheableSupportsMethod(): bool
+    public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $decorated, `<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`|`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>` $iriConverter, `<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>decorated</td><td>Symfony\Component\Serializer\Normalizer\NormalizerInterface</td><td></td></tr><tr><td>iriConverter</td><td>`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Api\IriConverterInterface</a>`</td><td></td></tr><tr><td>resourceClassResolver</td><td>`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>resourceMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### supportsNormalization
+
+Checks whether the given class is supported for normalization by this normalizer.
+
+```php
+public supportsNormalization($data, null|string $format, array $context): bool
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+bool
+
+### getSupportedTypes
+
+
+
+```php
+public getSupportedTypes($format): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>format</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array
+
+### hasCacheableSupportsMethod
+
+
+
+```php
+public hasCacheableSupportsMethod(): bool
+```
+
+#### Returns
+
+bool
+
+### normalize
+
+Normalizes an object into a set of arrays/scalars.
+
+```php
+public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td></td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+ArrayObject<br />array<br />string<br />int<br />float<br />bool

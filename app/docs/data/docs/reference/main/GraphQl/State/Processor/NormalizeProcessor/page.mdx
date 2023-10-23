@@ -1,0 +1,50 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\State\Processor\NormalizeProcessor](/docs/vmain/reference/GraphQl/State/Processor/NormalizeProcessor)
+
+Transforms the data to a GraphQl json format. It uses the Symfony Normalizer then performs changes according to the type of operation.
+
+```php
+class ApiPlatform\GraphQl\State\Processor\NormalizeProcessor implements `<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`
+{
+    public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $normalizer, `<a href="/docs/vmain/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, `<a href="/docs/vmain/reference/State/Pagination/Pagination">ApiPlatform\State\Pagination\Pagination</a>` $pagination)
+    public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $normalizer, `<a href="/docs/vmain/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, `<a href="/docs/vmain/reference/State/Pagination/Pagination">ApiPlatform\State\Pagination\Pagination</a>` $pagination)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>normalizer</td><td>Symfony\Component\Serializer\Normalizer\NormalizerInterface</td><td></td></tr><tr><td>serializerContextBuilder</td><td>`<a href="/docs/vmain/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>`</td><td></td></tr><tr><td>pagination</td><td>`<a href="/docs/vmain/reference/State/Pagination/Pagination">ApiPlatform\State\Pagination\Pagination</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### process
+
+
+
+```php
+public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

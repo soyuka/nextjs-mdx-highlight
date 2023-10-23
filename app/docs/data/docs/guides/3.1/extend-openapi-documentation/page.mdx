@@ -1,0 +1,80 @@
+---
+slug: extend-openapi-documentation
+name: Extend OpenAPI Documentation
+position: 11
+executable: true
+tags: openapi, expert
+---
+<SectionGuide id="section-0">
+# Extend OpenAPI Documentation
+
+```php
+// src/App/ApiResource.php
+namespace App\ApiResource;
+use ApiPlatform\Metadata\Post;
+use ApiPlatform\OpenApi\Model\Operation;
+use ApiPlatform\OpenApi\Model\RequestBody;
+use ApiPlatform\OpenApi\Model\Response;
+#[Post(
+
+```
+</SectionGuide>
+<SectionGuide id="section-1">
+To extend the OpenAPI documentation we use an [OpenApi Operation model](/docs/reference/OpenApi/Model/Operation/).
+When a field is not specified API Platform will add the missing informations.
+
+```php
+    openapi: new Operation(
+        responses: [
+            '200' => new Response(description: 'Ok'),
+        ],
+        summary: 'Add a book to the library.',
+        description: 'My awesome operation',
+
+```
+</SectionGuide>
+<SectionGuide id="section-2">
+Each of the Operation field that you want to customize has a model in our [OpenApi reference](/docs/reference/).
+
+```php
+        requestBody: new RequestBody(
+            content: new \ArrayObject(
+                [
+                    'application/ld+json' => [
+                        'schema' => [
+                            'properties' => [
+                                'id' => ['type' => 'integer', 'required' => true, 'description' => 'id'],
+                            ],
+                        ],
+                        'example' => [
+                            'id' => 12345,
+                        ],
+                    ],
+                ]
+            )
+        )
+    )
+)]
+class Book
+{
+}
+
+// src/App/Tests.php
+namespace App\Tests;
+use ApiPlatform\Playground\Test\TestGuideTrait;
+use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
+final class BookTest extends ApiTestCase
+{
+    use TestGuideTrait;
+    public function testBookDoesNotExists(): void
+    {
+        $response = static::createClient()->request('GET', '/docs', options: ['headers' => ['accept' => 'application/vnd.openapi+json']]);
+        $this->assertResponseStatusCodeSame(200);
+        $this->assertJsonContains([
+            'paths' => ['/books' => ['post' => ['summary' => 'Add a book to the library.', 'description' => 'My awesome operation']]],
+        ]);
+    }
+}
+
+```
+</SectionGuide>

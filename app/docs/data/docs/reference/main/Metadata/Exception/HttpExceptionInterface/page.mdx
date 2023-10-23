@@ -1,0 +1,48 @@
+---
+type: Interface
+---
+
+# [ApiPlatform\Metadata\Exception\HttpExceptionInterface](/docs/vmain/reference/Metadata/Exception/HttpExceptionInterface)
+
+
+
+```php
+interface ApiPlatform\Metadata\Exception\HttpExceptionInterface implements Throwable, Stringable
+{
+    public getStatusCode(): int
+    public getHeaders(): array
+    public getMessage(): string
+    public getCode()
+    public getFile(): string
+    public getLine(): int
+    public getTrace(): array
+    public getPrevious(): Throwable
+    public getTraceAsString(): string
+    public __toString(): string
+}
+```
+## Methods
+
+### getStatusCode
+
+Returns the status code.
+
+```php
+public getStatusCode(): int
+```
+
+#### Returns
+
+int
+
+### getHeaders
+
+Returns response headers.
+
+```php
+public getHeaders(): array
+```
+
+#### Returns
+
+array

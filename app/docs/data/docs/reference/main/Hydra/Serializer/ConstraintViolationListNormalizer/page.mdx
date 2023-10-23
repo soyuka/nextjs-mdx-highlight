@@ -1,0 +1,56 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Hydra\Serializer\ConstraintViolationListNormalizer](/docs/vmain/reference/Hydra/Serializer/ConstraintViolationListNormalizer)
+
+Converts \Symfony\Component\Validator\ConstraintViolationListInterface to a Hydra error representation.
+
+
+```php
+class ApiPlatform\Hydra\Serializer\ConstraintViolationListNormalizer extends `<a href="/docs/vmain/reference/Serializer/AbstractConstraintViolationListNormalizer">ApiPlatform\Serializer\AbstractConstraintViolationListNormalizer</a>` implements `<a href="/docs/vmain/reference/Serializer/CacheableSupportsMethodInterface">ApiPlatform\Serializer\CacheableSupportsMethodInterface</a>`, Symfony\Component\Serializer\Normalizer\NormalizerInterface
+{
+    public __construct(null|`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Api\UrlGeneratorInterface</a>`|`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Metadata\UrlGeneratorInterface</a>` $urlGenerator, null|array $serializePayloadFields, null|Symfony\Component\Serializer\NameConverter\NameConverterInterface $nameConverter)
+    public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+    public supportsNormalization($data, null|string $format, array $context): bool
+    public getSupportedTypes($format): array
+    public hasCacheableSupportsMethod(): bool
+    protected getViolations(Symfony\Component\Validator\ConstraintViolationListInterface $constraintViolationList): array
+    protected getMessagesAndViolations(Symfony\Component\Validator\ConstraintViolationListInterface $constraintViolationList): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(null|`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Api\UrlGeneratorInterface</a>`|`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Metadata\UrlGeneratorInterface</a>` $urlGenerator, null|array $serializePayloadFields, null|Symfony\Component\Serializer\NameConverter\NameConverterInterface $nameConverter)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>urlGenerator</td><td>`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Api\UrlGeneratorInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/UrlGeneratorInterface">ApiPlatform\Metadata\UrlGeneratorInterface</a>`</td><td></td></tr><tr><td>serializePayloadFields</td><td>array</td><td></td></tr><tr><td>nameConverter</td><td>Symfony\Component\Serializer\NameConverter\NameConverterInterface</td><td></td></tr>
+</tbody>
+</table>
+
+### normalize
+
+Normalizes an object into a set of arrays/scalars.Normalizes an object into a set of arrays/scalars.
+
+```php
+public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td></td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+ArrayObject<br />array<br />string<br />int<br />float<br />bool

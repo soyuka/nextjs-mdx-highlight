@@ -1,0 +1,251 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\Validator\Exception\ValidationException](/docs/vmain/reference/Symfony/Validator/Exception/ValidationException)
+
+Thrown when a validation error occurs.
+
+
+```php
+class ApiPlatform\Symfony\Validator\Exception\ValidationException extends `<a href="/docs/vmain/reference/Validator/Exception/ValidationException">ApiPlatform\Validator\Exception\ValidationException</a>` implements Throwable, Stringable, `<a href="/docs/vmain/reference/Exception/ExceptionInterface">ApiPlatform\Exception\ExceptionInterface</a>`, `<a href="/docs/vmain/reference/Symfony/Validator/Exception/ConstraintViolationListAwareExceptionInterface">ApiPlatform\Symfony\Validator\Exception\ConstraintViolationListAwareExceptionInterface</a>`, `<a href="/docs/vmain/reference/Metadata/Exception/ProblemExceptionInterface">ApiPlatform\Metadata\Exception\ProblemExceptionInterface</a>`, `<a href="/docs/vmain/reference/Metadata/Exception/ExceptionInterface">ApiPlatform\Metadata\Exception\ExceptionInterface</a>`
+{
+    public __construct(Symfony\Component\Validator\ConstraintViolationListInterface $constraintViolationList, string $message, int $code, null|Throwable $previous, null|string $errorTitle)
+    public getId(): string
+    public getHydraTitle(): string
+    public getHydraDescription(): string
+    public getType(): string
+    public getTitle(): string
+    public getDetail(): string
+    public setDetail(string $detail): null
+    public getStatus(): int
+    public setStatus(int $status): null
+    public getInstance(): string
+    public getConstraintViolationList(): Symfony\Component\Validator\ConstraintViolationListInterface
+    public __toString(): string
+    public getErrorTitle(): string
+    public __wakeup()
+    public getMessage(): string
+    public getCode()
+    public getFile(): string
+    public getLine(): int
+    public getTrace(): array
+    public getPrevious(): Throwable
+    public getTraceAsString(): string
+}
+```
+## Properties
+### errorTitle
+
+```php
+string $errorTitle
+```
+
+
+
+### message
+
+```php
+$message
+```
+
+
+
+### code
+
+```php
+$code
+```
+
+
+
+### file
+
+```php
+string $file
+```
+
+
+
+### line
+
+```php
+int $line
+```
+
+
+
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Validator\ConstraintViolationListInterface $constraintViolationList, string $message, int $code, null|Throwable $previous, null|string $errorTitle)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>constraintViolationList</td><td>Symfony\Component\Validator\ConstraintViolationListInterface</td><td></td></tr><tr><td>message</td><td>string</td><td></td></tr><tr><td>code</td><td>int</td><td></td></tr><tr><td>previous</td><td>Throwable</td><td></td></tr><tr><td>errorTitle</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+
+### getId
+
+
+
+```php
+public getId(): string
+```
+
+#### Returns
+
+string
+
+### getHydraTitle
+
+
+
+```php
+public getHydraTitle(): string
+```
+
+#### Returns
+
+string
+
+### getHydraDescription
+
+
+
+```php
+public getHydraDescription(): string
+```
+
+#### Returns
+
+string
+
+### getType
+
+
+
+```php
+public getType(): string
+```
+
+#### Returns
+
+string
+
+### getTitle
+
+
+
+```php
+public getTitle(): string
+```
+
+#### Returns
+
+string
+
+### getDetail
+
+
+
+```php
+public getDetail(): string
+```
+
+#### Returns
+
+string
+
+### setDetail
+
+
+
+```php
+public setDetail(string $detail): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>detail</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getStatus
+
+
+
+```php
+public getStatus(): int
+```
+
+#### Returns
+
+int
+
+### setStatus
+
+
+
+```php
+public setStatus(int $status): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>status</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getInstance
+
+
+
+```php
+public getInstance(): string
+```
+
+#### Returns
+
+string
+
+### getConstraintViolationList
+
+
+
+```php
+public getConstraintViolationList(): Symfony\Component\Validator\ConstraintViolationListInterface
+```
+
+#### Returns
+
+Symfony\Component\Validator\ConstraintViolationListInterface
+
+### __toString
+
+
+
+```php
+public __toString(): string
+```
+
+#### Returns
+
+string

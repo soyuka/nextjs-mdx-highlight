@@ -1,0 +1,71 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\AddFormatListener](/docs/vmain/reference/Symfony/EventListener/AddFormatListener)
+
+Chooses the format to use according to the Accept header and supported formats.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\AddFormatListener
+{
+    public __construct(Negotiation\Negotiator $negotiator, null|`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, array $formats, array $errorFormats, array $docsFormats, bool $eventsBackwardCompatibility)
+    public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+    public setRequestErrorFormat(null|`<a href="/docs/vmain/reference/Metadata/HttpOperation">ApiPlatform\Metadata\HttpOperation</a>` $operation, Symfony\Component\HttpFoundation\Request $request): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Negotiation\Negotiator $negotiator, null|`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, array $formats, array $errorFormats, array $docsFormats, bool $eventsBackwardCompatibility)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>negotiator</td><td>Negotiation\Negotiator</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>formats</td><td>array</td><td></td></tr><tr><td>errorFormats</td><td>array</td><td></td></tr><tr><td>docsFormats</td><td>array</td><td></td></tr><tr><td>eventsBackwardCompatibility</td><td>bool</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelRequest
+
+Sets the applicable format to the HttpFoundation Request.
+
+```php
+public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\RequestEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### setRequestErrorFormat
+
+
+
+```php
+public setRequestErrorFormat(null|`<a href="/docs/vmain/reference/Metadata/HttpOperation">ApiPlatform\Metadata\HttpOperation</a>` $operation, Symfony\Component\HttpFoundation\Request $request): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/HttpOperation">ApiPlatform\Metadata\HttpOperation</a>`</td><td></td></tr><tr><td>request</td><td>Symfony\Component\HttpFoundation\Request</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

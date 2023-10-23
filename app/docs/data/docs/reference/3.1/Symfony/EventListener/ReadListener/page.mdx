@@ -1,0 +1,71 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\ReadListener](/docs/v3.1/reference/Symfony/EventListener/ReadListener)
+
+Retrieves data from the applicable data provider and sets it as a request parameter called data.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\ReadListener
+{
+    public __construct(`<a href="/docs/v3.1/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, null|`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/v3.1/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, null|`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>` $uriVariablesConverter)
+    public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+    public clone($data)
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/v3.1/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, null|`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/v3.1/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, null|`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>` $uriVariablesConverter)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>provider</td><td>`<a href="/docs/v3.1/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>serializerContextBuilder</td><td>`<a href="/docs/v3.1/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>`</td><td></td></tr><tr><td>uriVariablesConverter</td><td>`<a href="/docs/v3.1/reference/Api/UriVariablesConverterInterface">ApiPlatform\Api\UriVariablesConverterInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelRequest
+
+Calls the data provider and sets the data attribute.
+
+```php
+public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\RequestEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### clone
+
+
+
+```php
+public clone($data)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+

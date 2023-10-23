@@ -1,0 +1,53 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Api\UriVariablesConverter](/docs/vmain/reference/Api/UriVariablesConverter)
+
+UriVariables converter that chains uri variables transformers.
+
+
+```php
+class ApiPlatform\Api\UriVariablesConverter implements `<a href="/docs/vmain/reference/Metadata/UriVariablesConverterInterface">ApiPlatform\Metadata\UriVariablesConverterInterface</a>`
+{
+    public __construct(`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, iterable $uriVariableTransformers)
+    public convert(array $uriVariables, string $class, array $context): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, iterable $uriVariableTransformers)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>propertyMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>uriVariableTransformers</td><td>iterable</td><td></td></tr>
+</tbody>
+</table>
+
+### convert
+
+Takes an array of strings representing URI variables (identifiers) and transform their values to the expected type.To handle the composite identifiers type correctly, use an `uri_variables_map` that maps uriVariables to their uriVariablesDefinition.
+Indeed, a composite identifier will already be parsed, and their corresponding properties will be the parameterName and not the defined
+identifiers.
+
+```php
+public convert(array $uriVariables, string $class, array $context): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>class</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

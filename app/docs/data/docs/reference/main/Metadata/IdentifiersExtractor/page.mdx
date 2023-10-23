@@ -1,0 +1,53 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Metadata\IdentifiersExtractor](/docs/vmain/reference/Metadata/IdentifiersExtractor)
+
+
+Extracts identifiers for a given Resource according to the retrieved Metadata.
+
+
+
+```php
+class ApiPlatform\Metadata\IdentifiersExtractor implements `<a href="/docs/vmain/reference/Metadata/IdentifiersExtractorInterface">ApiPlatform\Metadata\IdentifiersExtractorInterface</a>`
+{
+    public __construct(`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, `<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyNameCollectionFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyNameCollectionFactoryInterface</a>` $propertyNameCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory, null|Symfony\Component\PropertyAccess\PropertyAccessorInterface $propertyAccessor)
+    public getIdentifiersFromItem(object $item, null|`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $context): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, `<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>` $resourceClassResolver, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyNameCollectionFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyNameCollectionFactoryInterface</a>` $propertyNameCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory, null|Symfony\Component\PropertyAccess\PropertyAccessorInterface $propertyAccessor)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>resourceMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>resourceClassResolver</td><td>`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>propertyNameCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyNameCollectionFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyNameCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>propertyMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>`</td><td></td></tr><tr><td>propertyAccessor</td><td>Symfony\Component\PropertyAccess\PropertyAccessorInterface</td><td></td></tr>
+</tbody>
+</table>
+
+### getIdentifiersFromItem
+
+Finds identifiers from an Item (object).TODO: 3.0 identifiers should be stringable?
+
+```php
+public getIdentifiersFromItem(object $item, null|`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $context): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>item</td><td>object</td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

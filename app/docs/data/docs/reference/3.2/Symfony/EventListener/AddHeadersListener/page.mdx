@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\AddHeadersListener](/docs/v3.2/reference/Symfony/EventListener/AddHeadersListener)
+
+Configures cache HTTP headers for the current response.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\AddHeadersListener
+{
+    public __construct(bool $etag, null|int $maxAge, null|int $sharedMaxAge, null|array $vary, null|bool $public, null|`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|int $staleWhileRevalidate, null|int $staleIfError)
+    public onKernelResponse(Symfony\Component\HttpKernel\Event\ResponseEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(bool $etag, null|int $maxAge, null|int $sharedMaxAge, null|array $vary, null|bool $public, null|`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|int $staleWhileRevalidate, null|int $staleIfError)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>etag</td><td>bool</td><td></td></tr><tr><td>maxAge</td><td>int</td><td></td></tr><tr><td>sharedMaxAge</td><td>int</td><td></td></tr><tr><td>vary</td><td>array</td><td></td></tr><tr><td>public</td><td>bool</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>staleWhileRevalidate</td><td>int</td><td></td></tr><tr><td>staleIfError</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelResponse
+
+
+
+```php
+public onKernelResponse(Symfony\Component\HttpKernel\Event\ResponseEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\ResponseEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

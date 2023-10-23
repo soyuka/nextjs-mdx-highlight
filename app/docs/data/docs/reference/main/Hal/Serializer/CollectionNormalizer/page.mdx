@@ -1,0 +1,114 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Hal\Serializer\CollectionNormalizer](/docs/vmain/reference/Hal/Serializer/CollectionNormalizer)
+
+Normalizes collections in the HAL format.
+
+
+```php
+class ApiPlatform\Hal\Serializer\CollectionNormalizer extends `<a href="/docs/vmain/reference/Serializer/AbstractCollectionNormalizer">ApiPlatform\Serializer\AbstractCollectionNormalizer</a>` implements `<a href="/docs/vmain/reference/Serializer/CacheableSupportsMethodInterface">ApiPlatform\Serializer\CacheableSupportsMethodInterface</a>`, Symfony\Component\Serializer\Normalizer\NormalizerAwareInterface, Symfony\Component\Serializer\Normalizer\NormalizerInterface
+{
+    public __construct(`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, string $pageParameterName, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory)
+    protected getPaginationData(iterable $object, array $context): array
+    protected getItemsData(iterable $object, null|string $format, array $context): array
+    public supportsNormalization($data, null|string $format, array $context): bool
+    public hasCacheableSupportsMethod(): bool
+    public getSupportedTypes(null|string $format): array
+    public normalize(null|iterable $object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+    protected normalizeRawCollection(iterable $object, null|string $format, array $context): ArrayObject|array
+    protected getPaginationConfig(iterable $object, array $context): array
+    protected getOperation(array $context): `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`
+    protected initContext(string $resourceClass, array $context): array
+    public setNormalizer(Symfony\Component\Serializer\Normalizer\NormalizerInterface $normalizer): null
+    protected createOperationContext(array $context, null|string $resourceClass): array
+}
+```
+## Properties
+### resourceClassResolver
+
+```php
+`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver
+```
+
+
+
+### pageParameterName
+
+```php
+string $pageParameterName
+```
+
+
+
+### resourceMetadataFactory
+
+```php
+`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory
+```
+
+
+
+### normalizer
+
+```php
+Symfony\Component\Serializer\Normalizer\NormalizerInterface $normalizer
+```
+
+
+
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`|`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>` $resourceClassResolver, string $pageParameterName, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>resourceClassResolver</td><td>`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Metadata\ResourceClassResolverInterface</a>`<br />`<a href="/docs/vmain/reference/Metadata/ResourceClassResolverInterface">ApiPlatform\Api\ResourceClassResolverInterface</a>`</td><td></td></tr><tr><td>pageParameterName</td><td>string</td><td></td></tr><tr><td>resourceMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### getPaginationData
+
+Gets the pagination data.
+
+```php
+protected getPaginationData(iterable $object, array $context): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td>iterable</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array
+
+### getItemsData
+
+Gets items data.
+
+```php
+protected getItemsData(iterable $object, null|string $format, array $context): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td>iterable</td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

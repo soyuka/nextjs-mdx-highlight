@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\QueryParameterValidateListener](/docs/vmain/reference/Symfony/EventListener/QueryParameterValidateListener)
+
+Validates query parameters depending on filter description.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\QueryParameterValidateListener
+{
+    public __construct(`<a href="/docs/vmain/reference/Api/QueryParameterValidator/QueryParameterValidator">ApiPlatform\Api\QueryParameterValidator\QueryParameterValidator</a>` $queryParameterValidator, null|`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+    public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/Api/QueryParameterValidator/QueryParameterValidator">ApiPlatform\Api\QueryParameterValidator\QueryParameterValidator</a>` $queryParameterValidator, null|`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>queryParameterValidator</td><td>`<a href="/docs/vmain/reference/Api/QueryParameterValidator/QueryParameterValidator">ApiPlatform\Api\QueryParameterValidator\QueryParameterValidator</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelRequest
+
+
+
+```php
+public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\RequestEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

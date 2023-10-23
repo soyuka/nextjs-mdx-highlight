@@ -1,0 +1,50 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\State\Provider\DenormalizeProvider](/docs/v3.2/reference/GraphQl/State/Provider/DenormalizeProvider)
+
+A denormalization provider for GraphQl.
+
+```php
+class ApiPlatform\GraphQl\State\Provider\DenormalizeProvider implements `<a href="/docs/v3.2/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>`
+{
+    public __construct(`<a href="/docs/v3.2/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface[]</a>` $decorated, Symfony\Component\Serializer\Normalizer\DenormalizerInterface $denormalizer, `<a href="/docs/v3.2/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder)
+    public provide(`<a href="/docs/v3.2/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context): object|array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/v3.2/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface[]</a>` $decorated, Symfony\Component\Serializer\Normalizer\DenormalizerInterface $denormalizer, `<a href="/docs/v3.2/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>decorated</td><td>`<a href="/docs/v3.2/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface[]</a>`</td><td></td></tr><tr><td>denormalizer</td><td>Symfony\Component\Serializer\Normalizer\DenormalizerInterface</td><td></td></tr><tr><td>serializerContextBuilder</td><td>`<a href="/docs/v3.2/reference/GraphQl/Serializer/SerializerContextBuilderInterface">ApiPlatform\GraphQl\Serializer\SerializerContextBuilderInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### provide
+
+
+
+```php
+public provide(`<a href="/docs/v3.2/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context): object|array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>operation</td><td>`<a href="/docs/v3.2/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+object<br />array

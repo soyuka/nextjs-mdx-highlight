@@ -1,0 +1,103 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\Validator\Serializer\ValidationExceptionNormalizer](/docs/vmain/reference/Symfony/Validator/Serializer/ValidationExceptionNormalizer)
+
+
+
+```php
+class ApiPlatform\Symfony\Validator\Serializer\ValidationExceptionNormalizer implements Symfony\Component\Serializer\Normalizer\NormalizerInterface, `<a href="/docs/vmain/reference/Serializer/CacheableSupportsMethodInterface">ApiPlatform\Serializer\CacheableSupportsMethodInterface</a>`
+{
+    public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $decorated, null|Symfony\Component\Serializer\NameConverter\NameConverterInterface $nameConverter)
+    public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+    public supportsNormalization($data, null|string $format, array $context): bool
+    public hasCacheableSupportsMethod(): bool
+    public getSupportedTypes($format): array
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Serializer\Normalizer\NormalizerInterface $decorated, null|Symfony\Component\Serializer\NameConverter\NameConverterInterface $nameConverter)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>decorated</td><td>Symfony\Component\Serializer\Normalizer\NormalizerInterface</td><td></td></tr><tr><td>nameConverter</td><td>Symfony\Component\Serializer\NameConverter\NameConverterInterface</td><td></td></tr>
+</tbody>
+</table>
+
+### normalize
+
+
+
+```php
+public normalize($object, null|string $format, array $context): ArrayObject|array|string|int|float|bool
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>object</td><td></td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+ArrayObject<br />array<br />string<br />int<br />float<br />bool
+
+### supportsNormalization
+
+
+
+```php
+public supportsNormalization($data, null|string $format, array $context): bool
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>format</td><td>string</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+bool
+
+### hasCacheableSupportsMethod
+
+
+
+```php
+public hasCacheableSupportsMethod(): bool
+```
+
+#### Returns
+
+bool
+
+### getSupportedTypes
+
+
+
+```php
+public getSupportedTypes($format): array
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>format</td><td></td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array

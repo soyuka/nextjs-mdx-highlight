@@ -1,0 +1,100 @@
+---
+type: Interface
+---
+
+# [ApiPlatform\Metadata\Exception\ProblemExceptionInterface](/docs/vmain/reference/Metadata/Exception/ProblemExceptionInterface)
+
+Implements the Problem Error specification.
+
+```php
+interface ApiPlatform\Metadata\Exception\ProblemExceptionInterface
+{
+    public getType(): string
+    public getTitle(): string
+    public getStatus(): int
+    public setStatus(int $status): null
+    public getDetail(): string
+    public getInstance(): string
+}
+```
+## Methods
+
+### getType
+
+
+
+```php
+public getType(): string
+```
+
+#### Returns
+
+string
+
+### getTitle
+
+Note from RFC rfc7807: "title" (string) - A short, human-readable summary of the problem type.
+It SHOULD NOT change from occurrence to occurrence of the problem, except for purposes of localization.
+
+```php
+public getTitle(): string
+```
+
+#### Returns
+
+string
+
+### getStatus
+
+
+
+```php
+public getStatus(): int
+```
+
+#### Returns
+
+int
+
+### setStatus
+
+
+
+```php
+public setStatus(int $status): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>status</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getDetail
+
+
+
+```php
+public getDetail(): string
+```
+
+#### Returns
+
+string
+
+### getInstance
+
+
+
+```php
+public getInstance(): string
+```
+
+#### Returns
+
+string

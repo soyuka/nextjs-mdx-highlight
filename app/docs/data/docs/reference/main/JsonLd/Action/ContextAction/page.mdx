@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\JsonLd\Action\ContextAction](/docs/vmain/reference/JsonLd/Action/ContextAction)
+
+Generates JSON-LD contexts.
+
+
+```php
+class ApiPlatform\JsonLd\Action\ContextAction
+{
+    public __construct(`<a href="/docs/vmain/reference/JsonLd/ContextBuilderInterface">ApiPlatform\JsonLd\ContextBuilderInterface</a>` $contextBuilder, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, null|`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, null|Symfony\Component\Serializer\SerializerInterface $serializer)
+    public __invoke(string $shortName, null|Symfony\Component\HttpFoundation\Request $request): array|Symfony\Component\HttpFoundation\Response
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/JsonLd/ContextBuilderInterface">ApiPlatform\JsonLd\ContextBuilderInterface</a>` $contextBuilder, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, null|`<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>` $provider, null|`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $processor, null|Symfony\Component\Serializer\SerializerInterface $serializer)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>contextBuilder</td><td>`<a href="/docs/vmain/reference/JsonLd/ContextBuilderInterface">ApiPlatform\JsonLd\ContextBuilderInterface</a>`</td><td></td></tr><tr><td>resourceNameCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>provider</td><td>`<a href="/docs/vmain/reference/State/ProviderInterface">ApiPlatform\State\ProviderInterface</a>`</td><td></td></tr><tr><td>processor</td><td>`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`</td><td></td></tr><tr><td>serializer</td><td>Symfony\Component\Serializer\SerializerInterface</td><td></td></tr>
+</tbody>
+</table>
+
+### __invoke
+
+Generates a context according to the type requested.
+
+```php
+public __invoke(string $shortName, null|Symfony\Component\HttpFoundation\Request $request): array|Symfony\Component\HttpFoundation\Response
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>shortName</td><td>string</td><td></td></tr><tr><td>request</td><td>Symfony\Component\HttpFoundation\Request</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+array<br />Symfony\Component\HttpFoundation\Response

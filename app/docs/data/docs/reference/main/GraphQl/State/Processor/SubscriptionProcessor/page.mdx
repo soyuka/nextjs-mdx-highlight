@@ -1,0 +1,46 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\State\Processor\SubscriptionProcessor](/docs/vmain/reference/GraphQl/State/Processor/SubscriptionProcessor)
+
+Adds the mercure subscription url if available.
+
+```php
+class ApiPlatform\GraphQl\State\Processor\SubscriptionProcessor implements `<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`
+{
+    public __construct(`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $decorated, `<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>` $subscriptionManager, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>` $mercureSubscriptionIriGenerator)
+    public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context)
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $decorated, `<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>` $subscriptionManager, null|`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>` $mercureSubscriptionIriGenerator)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>decorated</td><td>`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`</td><td></td></tr><tr><td>subscriptionManager</td><td>`<a href="/docs/vmain/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>`</td><td></td></tr><tr><td>mercureSubscriptionIriGenerator</td><td>`<a href="/docs/vmain/reference/GraphQl/Subscription/MercureSubscriptionIriGeneratorInterface">ApiPlatform\GraphQl\Subscription\MercureSubscriptionIriGeneratorInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### process
+
+
+
+```php
+public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>

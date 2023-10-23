@@ -1,0 +1,295 @@
+---
+type: Class
+---
+
+# [ApiPlatform\ApiResource\Error](/docs/vmain/reference/ApiResource/Error)
+
+
+
+```php
+class ApiPlatform\ApiResource\Error extends Exception implements Stringable, Throwable, `<a href="/docs/vmain/reference/Metadata/Exception/ProblemExceptionInterface">ApiPlatform\Metadata\Exception\ProblemExceptionInterface</a>`, `<a href="/docs/vmain/reference/Metadata/Exception/HttpExceptionInterface">ApiPlatform\Metadata\Exception\HttpExceptionInterface</a>`
+{
+    public __construct(string $title, string $detail, int $status, array $originalTrace, null|string $instance, string $type, array $headers)
+    public getHydraTitle(): string
+    public getOriginalTrace(): array
+    public getHydraDescription(): string
+    public getDescription(): string
+    public createFromException(Exception|Throwable $exception, int $status): `<a href="/docs/vmain/reference/ApiResource/Error">ApiPlatform\ApiResource\Error</a>`
+    public getHeaders(): array
+    public getStatusCode(): int
+    public setHeaders(array $headers): null
+    public getType(): string
+    public getTitle(): string
+    public setType(string $type): null
+    public getStatus(): int
+    public setStatus(int $status): null
+    public getDetail(): string
+    public getInstance(): string
+    public __wakeup()
+    public getMessage(): string
+    public getCode()
+    public getFile(): string
+    public getLine(): int
+    public getTrace(): array
+    public getPrevious(): Throwable
+    public getTraceAsString(): string
+    public __toString(): string
+}
+```
+## Properties
+### message
+
+```php
+$message
+```
+
+
+
+### code
+
+```php
+$code
+```
+
+
+
+### file
+
+```php
+string $file
+```
+
+
+
+### line
+
+```php
+int $line
+```
+
+
+
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(string $title, string $detail, int $status, array $originalTrace, null|string $instance, string $type, array $headers)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>title</td><td>string</td><td></td></tr><tr><td>detail</td><td>string</td><td></td></tr><tr><td>status</td><td>int</td><td></td></tr><tr><td>originalTrace</td><td>array</td><td></td></tr><tr><td>instance</td><td>string</td><td></td></tr><tr><td>type</td><td>string</td><td></td></tr><tr><td>headers</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+### getHydraTitle
+
+
+
+```php
+public getHydraTitle(): string
+```
+
+#### Returns
+
+string
+
+### getOriginalTrace
+
+
+
+```php
+public getOriginalTrace(): array
+```
+
+#### Returns
+
+array
+
+### getHydraDescription
+
+
+
+```php
+public getHydraDescription(): string
+```
+
+#### Returns
+
+string
+
+### getDescription
+
+
+
+```php
+public getDescription(): string
+```
+
+#### Returns
+
+string
+
+### createFromException
+
+
+
+```php
+public createFromException(Exception|Throwable $exception, int $status): `<a href="/docs/vmain/reference/ApiResource/Error">ApiPlatform\ApiResource\Error</a>`
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>exception</td><td>Exception<br />Throwable</td><td></td></tr><tr><td>status</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+`<a href="/docs/vmain/reference/ApiResource/Error">ApiPlatform\ApiResource\Error</a>`
+
+### getHeaders
+
+
+
+```php
+public getHeaders(): array
+```
+
+#### Returns
+
+array
+
+### getStatusCode
+
+
+
+```php
+public getStatusCode(): int
+```
+
+#### Returns
+
+int
+
+### setHeaders
+
+
+
+```php
+public setHeaders(array $headers): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>headers</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getType
+
+
+
+```php
+public getType(): string
+```
+
+#### Returns
+
+string
+
+### getTitle
+
+
+
+```php
+public getTitle(): string
+```
+
+#### Returns
+
+string
+
+### setType
+
+
+
+```php
+public setType(string $type): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>type</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getStatus
+
+
+
+```php
+public getStatus(): int
+```
+
+#### Returns
+
+int
+
+### setStatus
+
+
+
+```php
+public setStatus(int $status): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>status</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null
+
+### getDetail
+
+
+
+```php
+public getDetail(): string
+```
+
+#### Returns
+
+string
+
+### getInstance
+
+
+
+```php
+public getInstance(): string
+```
+
+#### Returns
+
+string

@@ -1,0 +1,44 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\Type\SchemaBuilder](/docs/v3.2/reference/GraphQl/Type/SchemaBuilder)
+
+Builds the GraphQL schema.
+
+
+```php
+class ApiPlatform\GraphQl\Type\SchemaBuilder implements `<a href="/docs/v3.2/reference/GraphQl/Type/SchemaBuilderInterface">ApiPlatform\GraphQl\Type\SchemaBuilderInterface</a>`
+{
+    public __construct(`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, `<a href="/docs/v3.2/reference/GraphQl/Type/TypesFactoryInterface">ApiPlatform\GraphQl\Type\TypesFactoryInterface</a>` $typesFactory, `<a href="/docs/v3.2/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>` $typesContainer, `<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderEnumInterface">ApiPlatform\GraphQl\Type\FieldsBuilderEnumInterface</a>`|`<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderInterface">ApiPlatform\GraphQl\Type\FieldsBuilderInterface</a>` $fieldsBuilder)
+    public getSchema(): GraphQL\Type\Schema
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>` $resourceNameCollectionFactory, `<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, `<a href="/docs/v3.2/reference/GraphQl/Type/TypesFactoryInterface">ApiPlatform\GraphQl\Type\TypesFactoryInterface</a>` $typesFactory, `<a href="/docs/v3.2/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>` $typesContainer, `<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderEnumInterface">ApiPlatform\GraphQl\Type\FieldsBuilderEnumInterface</a>`|`<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderInterface">ApiPlatform\GraphQl\Type\FieldsBuilderInterface</a>` $fieldsBuilder)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>resourceNameCollectionFactory</td><td>`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceNameCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceNameCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>typesFactory</td><td>`<a href="/docs/v3.2/reference/GraphQl/Type/TypesFactoryInterface">ApiPlatform\GraphQl\Type\TypesFactoryInterface</a>`</td><td></td></tr><tr><td>typesContainer</td><td>`<a href="/docs/v3.2/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>`</td><td></td></tr><tr><td>fieldsBuilder</td><td>`<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderEnumInterface">ApiPlatform\GraphQl\Type\FieldsBuilderEnumInterface</a>`<br />`<a href="/docs/v3.2/reference/GraphQl/Type/FieldsBuilderInterface">ApiPlatform\GraphQl\Type\FieldsBuilderInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### getSchema
+
+
+
+```php
+public getSchema(): GraphQL\Type\Schema
+```
+
+#### Returns
+
+GraphQL\Type\Schema

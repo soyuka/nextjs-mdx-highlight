@@ -1,0 +1,63 @@
+---
+type: Trait
+---
+
+# [ApiPlatform\Serializer\InputOutputMetadataTrait](/docs/v3.1/reference/Serializer/InputOutputMetadataTrait)
+
+
+
+```php
+trait ApiPlatform\Serializer\InputOutputMetadataTrait
+{
+    protected getInputClass(array $context): string
+    protected getOutputClass(array $context): string
+}
+```
+## Properties
+### resourceMetadataCollectionFactory
+
+```php
+`<a href="/docs/v3.1/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory
+```
+
+
+
+## Methods
+
+### getInputClass
+
+
+
+```php
+protected getInputClass(array $context): string
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+string
+
+### getOutputClass
+
+
+
+```php
+protected getOutputClass(array $context): string
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+string

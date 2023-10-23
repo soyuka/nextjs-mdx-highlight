@@ -1,0 +1,35 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\Bundle\DependencyInjection\Compiler\TestMercureHubPass](/docs/v3.2/reference/Symfony/Bundle/DependencyInjection/Compiler/TestMercureHubPass)
+
+Decorate each Mercure Hub with TraceableHub for test purpose.
+Prevents enabling debug mode on tests for Mercure assertions.
+
+```php
+class ApiPlatform\Symfony\Bundle\DependencyInjection\Compiler\TestMercureHubPass implements Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface
+{
+    public process(Symfony\Component\DependencyInjection\ContainerBuilder $container): null
+}
+```
+## Methods
+
+### process
+
+
+
+```php
+public process(Symfony\Component\DependencyInjection\ContainerBuilder $container): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>container</td><td>Symfony\Component\DependencyInjection\ContainerBuilder</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

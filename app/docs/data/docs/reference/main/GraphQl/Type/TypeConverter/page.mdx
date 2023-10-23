@@ -1,0 +1,72 @@
+---
+type: Class
+---
+
+# [ApiPlatform\GraphQl\Type\TypeConverter](/docs/vmain/reference/GraphQl/Type/TypeConverter)
+
+Converts a type to its GraphQL equivalent.
+
+
+```php
+class ApiPlatform\GraphQl\Type\TypeConverter implements `<a href="/docs/vmain/reference/GraphQl/Type/TypeConverterInterface">ApiPlatform\GraphQl\Type\TypeConverterInterface</a>`
+{
+    public __construct(`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderEnumInterface">ApiPlatform\GraphQl\Type\TypeBuilderEnumInterface</a>`|`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderInterface">ApiPlatform\GraphQl\Type\TypeBuilderInterface</a>` $typeBuilder, `<a href="/docs/vmain/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>` $typesContainer, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory)
+    public convertType(Symfony\Component\PropertyInfo\Type $type, bool $input, `<a href="/docs/vmain/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>` $rootOperation, string $resourceClass, string $rootResource, null|string $property, int $depth): GraphQL\Type\Definition\Type|string
+    public resolveType(string $type): GraphQL\Type\Definition\Type
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderEnumInterface">ApiPlatform\GraphQl\Type\TypeBuilderEnumInterface</a>`|`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderInterface">ApiPlatform\GraphQl\Type\TypeBuilderInterface</a>` $typeBuilder, `<a href="/docs/vmain/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>` $typesContainer, `<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataCollectionFactory, `<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>` $propertyMetadataFactory)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>typeBuilder</td><td>`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderEnumInterface">ApiPlatform\GraphQl\Type\TypeBuilderEnumInterface</a>`<br />`<a href="/docs/vmain/reference/GraphQl/Type/TypeBuilderInterface">ApiPlatform\GraphQl\Type\TypeBuilderInterface</a>`</td><td></td></tr><tr><td>typesContainer</td><td>`<a href="/docs/vmain/reference/GraphQl/Type/TypesContainerInterface">ApiPlatform\GraphQl\Type\TypesContainerInterface</a>`</td><td></td></tr><tr><td>resourceMetadataCollectionFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>propertyMetadataFactory</td><td>`<a href="/docs/vmain/reference/Metadata/Property/Factory/PropertyMetadataFactoryInterface">ApiPlatform\Metadata\Property\Factory\PropertyMetadataFactoryInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### convertType
+
+Converts a built-in type to its GraphQL equivalent.
+A string can be returned for a custom registered type.
+
+```php
+public convertType(Symfony\Component\PropertyInfo\Type $type, bool $input, `<a href="/docs/vmain/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>` $rootOperation, string $resourceClass, string $rootResource, null|string $property, int $depth): GraphQL\Type\Definition\Type|string
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>type</td><td>Symfony\Component\PropertyInfo\Type</td><td></td></tr><tr><td>input</td><td>bool</td><td></td></tr><tr><td>rootOperation</td><td>`<a href="/docs/vmain/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>`</td><td></td></tr><tr><td>resourceClass</td><td>string</td><td></td></tr><tr><td>rootResource</td><td>string</td><td></td></tr><tr><td>property</td><td>string</td><td></td></tr><tr><td>depth</td><td>int</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+GraphQL\Type\Definition\Type<br />string
+
+### resolveType
+
+Resolves a type written with the GraphQL type system to its object representation.
+
+```php
+public resolveType(string $type): GraphQL\Type\Definition\Type
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>type</td><td>string</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+GraphQL\Type\Definition\Type

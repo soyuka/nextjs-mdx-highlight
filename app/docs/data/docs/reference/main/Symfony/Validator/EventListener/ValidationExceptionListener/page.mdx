@@ -1,0 +1,53 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\Validator\EventListener\ValidationExceptionListener](/docs/vmain/reference/Symfony/Validator/EventListener/ValidationExceptionListener)
+
+Handles validation errors.
+TODO: remove this class.
+
+
+
+```php
+class ApiPlatform\Symfony\Validator\EventListener\ValidationExceptionListener
+{
+    public __construct(Symfony\Component\Serializer\SerializerInterface $serializer, array $errorFormats, array $exceptionToStatus, null|`<a href="/docs/vmain/reference/Symfony/EventListener/ExceptionListener">ApiPlatform\Symfony\EventListener\ExceptionListener</a>` $exceptionListener)
+    public onKernelException(Symfony\Component\HttpKernel\Event\ExceptionEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Serializer\SerializerInterface $serializer, array $errorFormats, array $exceptionToStatus, null|`<a href="/docs/vmain/reference/Symfony/EventListener/ExceptionListener">ApiPlatform\Symfony\EventListener\ExceptionListener</a>` $exceptionListener)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>serializer</td><td>Symfony\Component\Serializer\SerializerInterface</td><td></td></tr><tr><td>errorFormats</td><td>array</td><td></td></tr><tr><td>exceptionToStatus</td><td>array</td><td></td></tr><tr><td>exceptionListener</td><td>`<a href="/docs/vmain/reference/Symfony/EventListener/ExceptionListener">ApiPlatform\Symfony\EventListener\ExceptionListener</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelException
+
+Returns a list of violations normalized in the Hydra format.
+
+```php
+public onKernelException(Symfony\Component\HttpKernel\Event\ExceptionEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\ExceptionEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

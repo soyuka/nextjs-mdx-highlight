@@ -1,0 +1,47 @@
+---
+type: Class
+---
+
+# [ApiPlatform\HttpCache\State\AddTagsProcessor](/docs/vmain/reference/HttpCache/State/AddTagsProcessor)
+
+## See also
+- [https://developers.cloudflare.com/cache/how-to/purge-cache#add-cache-tag-http-response-headers](https://developers.cloudflare.com/cache/how-to/purge-cache#add-cache-tag-http-response-headers)
+
+- [https://docs.varnish-software.com/varnish-cache-plus/vmods/ykey/](https://docs.varnish-software.com/varnish-cache-plus/vmods/ykey/)
+
+
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>` $decorated, `<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>` $iriConverter, null|`<a href="/docs/vmain/reference/HttpCache/PurgerInterface">ApiPlatform\HttpCache\PurgerInterface</a>` $purger)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>decorated</td><td>`<a href="/docs/vmain/reference/State/ProcessorInterface">ApiPlatform\State\ProcessorInterface</a>`</td><td></td></tr><tr><td>iriConverter</td><td>`<a href="/docs/vmain/reference/Metadata/IriConverterInterface">ApiPlatform\Metadata\IriConverterInterface</a>`</td><td></td></tr><tr><td>purger</td><td>`<a href="/docs/vmain/reference/HttpCache/PurgerInterface">ApiPlatform\HttpCache\PurgerInterface</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+### process
+
+Adds the configured HTTP cache tag and "xkey" headers.
+
+```php
+public process($data, `<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>` $operation, array $uriVariables, array $context)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>data</td><td></td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/vmain/reference/Metadata/Operation">ApiPlatform\Metadata\Operation</a>`</td><td></td></tr><tr><td>uriVariables</td><td>array</td><td></td></tr><tr><td>context</td><td>array</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+

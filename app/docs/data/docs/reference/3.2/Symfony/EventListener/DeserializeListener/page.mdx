@@ -1,0 +1,51 @@
+---
+type: Class
+---
+
+# [ApiPlatform\Symfony\EventListener\DeserializeListener](/docs/v3.2/reference/Symfony/EventListener/DeserializeListener)
+
+Updates the entity retrieved by the data provider with data contained in the request body.
+
+
+```php
+class ApiPlatform\Symfony\EventListener\DeserializeListener
+{
+    public __construct(Symfony\Component\Serializer\SerializerInterface $serializer, `<a href="/docs/v3.2/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, null|`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, null|Symfony\Contracts\Translation\TranslatorInterface $translator)
+    public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+}
+```
+## Methods
+
+### __construct
+
+
+
+```php
+public __construct(Symfony\Component\Serializer\SerializerInterface $serializer, `<a href="/docs/v3.2/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>` $serializerContextBuilder, null|`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>` $resourceMetadataFactory, null|Symfony\Contracts\Translation\TranslatorInterface $translator)
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>serializer</td><td>Symfony\Component\Serializer\SerializerInterface</td><td></td></tr><tr><td>serializerContextBuilder</td><td>`<a href="/docs/v3.2/reference/Serializer/SerializerContextBuilderInterface">ApiPlatform\Serializer\SerializerContextBuilderInterface</a>`</td><td></td></tr><tr><td>resourceMetadataFactory</td><td>`<a href="/docs/v3.2/reference/Metadata/Resource/Factory/ResourceMetadataCollectionFactoryInterface">ApiPlatform\Metadata\Resource\Factory\ResourceMetadataCollectionFactoryInterface</a>`</td><td></td></tr><tr><td>translator</td><td>Symfony\Contracts\Translation\TranslatorInterface</td><td></td></tr>
+</tbody>
+</table>
+
+### onKernelRequest
+
+Deserializes the data sent in the requested format.
+
+```php
+public onKernelRequest(Symfony\Component\HttpKernel\Event\RequestEvent $event): null
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>event</td><td>Symfony\Component\HttpKernel\Event\RequestEvent</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+null

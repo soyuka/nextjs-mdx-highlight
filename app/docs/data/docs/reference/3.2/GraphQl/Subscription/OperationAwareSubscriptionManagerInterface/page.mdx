@@ -1,0 +1,36 @@
+---
+type: Interface
+---
+
+# [ApiPlatform\GraphQl\Subscription\OperationAwareSubscriptionManagerInterface](/docs/v3.2/reference/GraphQl/Subscription/OperationAwareSubscriptionManagerInterface)
+
+Manages all the queried subscriptions and creates their ID.
+
+
+```php
+interface ApiPlatform\GraphQl\Subscription\OperationAwareSubscriptionManagerInterface implements `<a href="/docs/v3.2/reference/GraphQl/Subscription/SubscriptionManagerInterface">ApiPlatform\GraphQl\Subscription\SubscriptionManagerInterface</a>`
+{
+    public retrieveSubscriptionId(array $context, null|array $result, null|`<a href="/docs/v3.2/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>` $operation): string
+    public getPushPayloads(object $object): array
+}
+```
+## Methods
+
+### retrieveSubscriptionId
+
+
+
+```php
+public retrieveSubscriptionId(array $context, null|array $result, null|`<a href="/docs/v3.2/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>` $operation): string
+```
+
+#### Parameters
+
+<table><tbody>
+<tr><td>context</td><td>array</td><td></td></tr><tr><td>result</td><td>array</td><td></td></tr><tr><td>operation</td><td>`<a href="/docs/v3.2/reference/Metadata/GraphQl/Operation">ApiPlatform\Metadata\GraphQl\Operation</a>`</td><td></td></tr>
+</tbody>
+</table>
+
+#### Returns
+
+string

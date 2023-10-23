@@ -1,0 +1,115 @@
+---
+slug: test-your-api
+name: Test your API
+executable: true
+position: 7
+tags: tests
+---
+<SectionGuide id="section-0">
+
+```php
+// src/App/Tests.php
+namespace App\Tests;
+use ApiPlatform\Playground\Test\TestGuideTrait;
+use ApiPlatform\Symfony\Bundle\Test\ApiTestCase;
+use App\ApiResource\Book;
+
+```
+</SectionGuide>
+<SectionGuide id="section-1">
+API Platform [testing utilities](/docs/core/testing/) provides an [ApiTestCase](/docs/reference/Symfony/Bundle/Test/ApiTestCase/)
+that allows you to send an HTTP Request, and to perform assertions on the Response.
+
+```php
+final class BookTest extends ApiTestCase
+{
+    use TestGuideTrait;
+    public function testBookDoesNotExists(): void
+    {
+
+```
+</SectionGuide>
+<SectionGuide id="section-2">
+For starters we can get an [HTTP Client](/docs/reference/Symfony/Bundle/Test/Client/) with the `createClient` method.
+
+```php
+        $client = static::createClient();
+
+```
+</SectionGuide>
+<SectionGuide id="section-3">
+Then, issue an HTTP request via this client, as we didn't load any data we'd expect this to send a 404 Not found.
+
+```php
+        $client->request(method: 'GET', url: '/books/1');
+        $this->assertResponseStatusCodeSame(404);
+
+```
+</SectionGuide>
+<SectionGuide id="section-4">
+Our API uses the JSON Problem specification on every thrown exception.
+
+```php
+        $this->assertJsonContains([
+            'detail' => 'Not Found',
+        ]);
+    }
+    public function testGetCollection(): void
+    {
+        $response = static::createClient()->request(method: 'GET', url: '/books');
+
+```
+</SectionGuide>
+<SectionGuide id="section-5">
+We provide assertions based on your resource's JSON Schema to save time asserting that the data
+matches an expected format, for example here with a collection.
+
+```php
+        $this->assertMatchesResourceCollectionJsonSchema(Book::class);
+
+```
+</SectionGuide>
+<SectionGuide id="section-6">
+PHPUnit default assertios are also available.
+
+```php
+        $this->assertCount(0, $response->toArray()['hydra:member']);
+    }
+}
+
+// src/App/ApiResource.php
+namespace App\ApiResource;
+use ApiPlatform\Metadata\ApiResource;
+use ApiPlatform\Metadata\CollectionOperationInterface;
+#[ApiResource(provider: [Book::class, 'provide'])]
+class Book
+{
+    public string $id;
+    public static function provide($operation)
+    {
+        return $operation instanceof CollectionOperationInterface ? [] : null;
+    }
+}
+
+```
+</SectionGuide>
+<SectionGuide id="section-7">
+# Test your API
+
+```php
+// src/App/Playground.php
+namespace App\Playground;
+use Symfony\Component\HttpFoundation\Request;
+function request(): Request
+{
+    return Request::create(
+        uri: '/books/1',
+        method: 'GET',
+        server: [
+            'HTTP_ACCEPT' => 'application/ld+json',
+        ]
+    );
+}
+
+```
+</SectionGuide>
