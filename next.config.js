@@ -32,11 +32,12 @@ const prettyOptions = {
 
 
 const withMDX = require('@next/mdx')({
-  options: {
-    rehypePlugins: [
-      [rehypePrettyCode, prettyOptions],
-    ]
-  }
+  // options: {
+  //   rehypePlugins: [
+  //     rehypePrettyCode
+  //     // [rehypePrettyCode, prettyOptions],
+  //   ]
+  // }
 })
 
 /** @type {import('next').NextConfig} */
@@ -45,13 +46,6 @@ const nextConfig = {
 	output: "standalone",
 	trailingSlash: true,
 	reactStrictMode: true,
-	eslint: {
-		ignoreDuringBuilds: true,
-		dirs: ["app"],
-	},
-
-
-
 }
 
 // const withMDX = nextMDX({
